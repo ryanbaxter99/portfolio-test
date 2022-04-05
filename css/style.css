@@ -1,0 +1,318 @@
+li, img, div {
+    margin: 20px 20px 20px 20px;
+    padding-top: 20px;
+}
+
+body {
+    /* background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%); */
+    background-color: #090a0f;
+    font-family: "Montserrat", "Trebuchet MS", Helvetica;
+    margin: 1em;
+}
+
+h1 { 
+    font-size: 35; 
+    line-height: 1.1;
+    font-weight: bold;
+    text-align:center;
+    text-transform: uppercase;
+    color: #c8b60d;
+    margin: 1em;
+}
+
+h2 { 
+    font-size: 2em; 
+    font-style: bold;
+    text-transform: uppercase;
+    color: #c8b60d;
+}
+h3 {
+    font-size: 1em; 
+    font-style: bold;
+    text-transform: uppercase;
+    color: #c8b60d;
+}
+
+p{
+    color: white;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+label{
+    color: #c8b60d;
+}
+
+
+/* skip to main content requirment */
+a.skip-to-content {
+    left: 0;
+    padding: 6px;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+}
+
+a.skip-to-content:focus {
+    position: static;
+    top: 0px;
+    visibility: visible;
+}
+
+.nav-container {
+    display: none;
+}
+
+.mobile-logo {
+  text-align: center;
+}
+
+.skip{
+    background: white;
+    color: #c8b60d;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+  }
+
+.skip:focus{
+    top: 0px;
+}   
+
+/* index photo animation */
+@keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .index-animation-1 {
+    animation: slide 1000ms;
+  }
+
+  .index-animation-2 {
+    animation: slide 1500ms;
+  }
+
+  .index-animation-3 {
+    animation: slide 2000ms;
+  }
+
+  .index-animation-4 {
+    animation: slide 2500ms;
+  }
+
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vid-title {
+    text-align: center;
+}
+
+.vid-desc {
+    text-align: center;
+    color: #c8b60d;
+}
+
+
+/* may delete vv */
+.video iframe {
+    width: 90%;
+}
+/* xx */
+
+
+/* Contact page styling */
+.contact-background-img {
+    text-align: center;
+    height: 100px;
+    background-image: url("../images/background.jpeg");
+}
+
+
+/* style the footer and the footer links */
+
+.footer-dark .item.social {
+    text-align: center
+}
+
+.footer-dark .item.social>a {
+    font-size: 20px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.75
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.9
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    font-size: 13px;
+    margin-bottom: 0
+}
+
+
+/* COntact grid */
+
+.personal-photos {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 90%;
+}
+
+.per1 {
+    grid-row: 1 / span 1;
+}
+
+.per2 {
+    grid-row: 2 / span 1;
+}
+
+.per3 {
+    grid-row: 3 / span 1;
+}
+
+.per4 {
+    grid-row: 4 / span 1;
+}
+
+
+
+/* Tablet View */
+@media (min-width: 760px) {
+    
+    /* Nav bar on every page */
+    .nav-container {
+        text-align: center; 
+        font-family: 'Raleway';
+        font-weight: bolder;
+        text-decoration: none;
+        padding: 30px; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+        grid-template-rows: 0.25fr;
+        gap: 1px 0px;
+        grid-auto-flow: row;
+        grid-template-areas: "home guests logo videos vontact";
+    }
+
+    .nav-container a { 
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+    
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: none;
+    }
+
+    .active{
+        font-weight: bold;
+        border: 3px outset; 
+    }
+
+    nav a:hover{
+        font-weight: revert; 
+        color: gold;
+    }
+
+    .home { 
+        grid-area: home; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .guests { 
+        grid-area: guests; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo { 
+        grid-area: logo; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .videos { 
+        grid-area: videos; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact { 
+        grid-area: contact; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* About page welcome images and statement */
+    
+    
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .footer-dark .item.text {
+        margin-bottom: 0;
+    }
+
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px
+    }
+
+    .footer-dark .item.text {
+        margin-bottom: 0
+    }
+}
+
+/* DESKTOP view */
+@media screen and (min-width: 1000px) {
+
+    .mobile-logo {
+        display: none;
+    }
+
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    /* /Turn off transition/ */
+    .index-animation-1, .index-animation-2, .index-animation-3, .index-animation-4 {
+      animation: none;
+    }
+
+}
+
